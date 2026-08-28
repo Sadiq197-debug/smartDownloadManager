@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SmartDownloadManagerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SmartDownloadManagerApplication.class, args);
+
+        System.out.println("This is smart download manager project");
 	}
 
 }
