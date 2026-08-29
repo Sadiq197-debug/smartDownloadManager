@@ -6,5 +6,6 @@ public enum DownloadStatus {
     COMPLETED,
     CANCELLED,
     FAILED,
-    QUEUED
+    QUEUED,
+
 }

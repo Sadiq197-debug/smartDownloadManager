@@ -14,7 +14,9 @@ public class DownloadTask {
         this.destination = destination;
         this.fileName = fileName;
     }
-
+    public void setId(int id){
+        this.id = id;
+    }
     public void setTotalBytes(long totalBytes) {
         this.totalBytes = totalBytes;
     }
