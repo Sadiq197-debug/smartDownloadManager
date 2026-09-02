@@ -16,6 +16,15 @@ public class DownloadTask {
         this.destination = destination;
         this.fileName = fileName;
     }
+    public String toString(){
+        return "ID : "+id+
+                "\nURL : "+url+
+                "\nDestination : "+destination+
+                "\nFile Name : "+fileName+
+                "\nStatus : "+status+
+                "\nTotal Bytes : "+totalBytes+
+                "\nDownloaded Bytes : "+downloadedBytes;
+    }
     public void setTotalBytes(long totalBytes) {
         this.totalBytes = totalBytes;
     }
@@ -39,4 +48,6 @@ public class DownloadTask {
     public long getTotalBytes(){
         return totalBytes;
     }
+
+
 }
