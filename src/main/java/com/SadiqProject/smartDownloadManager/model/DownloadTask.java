@@ -1,7 +1,8 @@
 package com.SadiqProject.smartDownloadManager.model;
+import java.util.UUID;
 
 public class DownloadTask {
-    private int id;
+    private final UUID id;
     private String url;
     private String destination;
     private String fileName;
@@ -10,11 +11,20 @@ public class DownloadTask {
     private long downloadedBytes;
 
     public DownloadTask(String url, String destination, String fileName) {
+        this.id = UUID.randomUUID();
         this.url = url;
         this.destination = destination;
         this.fileName = fileName;
     }
-
+    public String toString(){
+        return "ID : "+id+
+                "\nURL : "+url+
+                "\nDestination : "+destination+
+                "\nFile Name : "+fileName+
+                "\nStatus : "+status+
+                "\nTotal Bytes : "+totalBytes+
+                "\nDownloaded Bytes : "+downloadedBytes;
+    }
     public void setTotalBytes(long totalBytes) {
         this.totalBytes = totalBytes;
     }
@@ -29,7 +39,7 @@ public class DownloadTask {
     public DownloadStatus getStatus(){
         return status;
     }
-    public int getId(){
+    public UUID getId(){
         return id;
     }
     public long getDownloadedBytes(){
@@ -38,4 +48,6 @@ public class DownloadTask {
     public long getTotalBytes(){
         return totalBytes;
     }
+
+
 }
